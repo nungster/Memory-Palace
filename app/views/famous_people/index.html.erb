@@ -1,0 +1,56 @@
+<h1>Listing Famous People</h1>
+
+
+<ul class="nav nav-pills">
+  <li class="dropdown" id="admin_menu">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#admin_menu">
+      Select First Letter
+    </a>
+    <ul class="dropdown-menu">
+      <% @Admin_menu.each do |menu_text,menu_action| %>
+          <li><a href=" <%= menu_action %>"><%= menu_text %></a></li>
+      <% end %>
+    </ul>
+  </li>
+</ul>
+
+
+<%= will_paginate @famouspeople %>
+
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+    <th>Code</th>
+    <th>Title</th>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Last Name</th>
+    <th>Link</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @famouspeople.each do |famousperson| %>
+  <tr>
+    <td><%= famousperson.code %></td>
+    <td><%= famousperson.title %></td>
+    <td><%= famousperson.first_name %></td>
+    <td><%= famousperson.middle_name %></td>
+    <td><%= famousperson.last_name %></td>
+    <td><%= famousperson.link %></td>
+    <td><%= famousperson.note %></td>
+
+    <td><%= link_to 'Show', famousperson %></td>
+
+  <% if current_user && (current_user.has_role? :admin) %>
+  <td><%= link_to 'Edit', famous_person_path(famousperson) %></td>
+    <td><%= link_to 'Destroy', famousperson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Person', new_famous_person_path %>

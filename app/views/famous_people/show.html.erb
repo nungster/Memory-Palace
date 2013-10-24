@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code:</b>
+  <%= @famouspeople.code %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @famouspeople.title %>
+</p>
+
+<p>
+  <b>First:</b>
+  <%= @famouspeople.first_name %>
+</p>
+
+<p>
+  <b>Middle:</b>
+  <%= @famouspeople.middle_name %>
+</p>
+
+<p>
+  <b>Last:</b>
+  <%= @famouspeople.last_name %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @famouspeople.link %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @famouspeople.note %>
+</p>
+
+<%= link_to 'Edit', edit_famous_person_path(@famouspeople) %> |
+<%= link_to 'Back', famous_people_path %>

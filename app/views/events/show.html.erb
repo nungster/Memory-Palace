@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @event.name %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @event.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @event.longitude %>
+</p>
+
+<p>
+  <b>Airtemp:</b>
+  <%= @event.airTemp %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @event.amount %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @event.length %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

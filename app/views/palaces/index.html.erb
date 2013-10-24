@@ -1,0 +1,26 @@
+<h1>Palaces</h1>
+
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+    <th>Title</th>
+    <th>Type</th>
+    <th>Updated</th>
+    <th></th>
+  </tr>
+
+<% @palaces.each do |palace| %>
+  <tr>
+    <td><%= palace.title %></td>
+    <td><%= palace.ptype %></td>
+    <td><%= palace.updated_at %></td>
+
+    <td><%= link_to 'Show', palace %></td>
+    <td><%= link_to 'Edit', edit_palace_path(palace) %></td>
+    <td><%= link_to 'Destroy', palace, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Palace', new_palace_path %>

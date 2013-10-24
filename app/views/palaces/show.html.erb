@@ -1,0 +1,78 @@
+
+<p>
+  <b>Title:</b>
+  <%= @palace.title %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @palace.ptype %>
+</p>
+
+<% if @palace.ptype == 1 %>
+    <p>
+        <b>Numbers:</b>
+        <%= @palace.ptype %>
+        <%= @palace.id %>
+
+    </p>
+    <table class="table table-bordered table-striped table-hover">
+      <tr>
+        <th>Code</th>
+        <th>Person</th>
+        <th>Place</th>
+        <th>Action</th>
+        <th>Link</th>
+        <th>Note</th>
+
+      </tr>
+      <tr>
+        <% @digits.each do |digit| %>
+          <tr>
+            <td>
+              <%= submit_tag "#{digit}", :type => 'button', :class => "btn btn-info", :onclick => "window.location.href = '/famous_people/addpeg/#{digit}'" %>
+            </td>
+            <% @palace.pegs.each do |peg| %>
+                <% if peg.code == digit %>
+                    <td><%= peg.full_name %></td>
+                    <td><%= peg.place %></td>
+                    <td><%= peg.action %></td>
+                    <td><%= peg.link %></td>
+                    <td><%= peg.note %></td>
+
+                    <td><%= link_to 'Show', peg %></td>
+                    <td><%= link_to 'Edit', edit_peg_path(peg) %></td>
+                    <td><%= link_to 'Destroy', peg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
+            <% end %>
+          </tr>
+      <% end %>
+      </tr>
+
+    </table>
+
+<% elsif @palace.ptype == 2 %>
+        <p>
+          <b>Cards:</b>
+          <%= @palace.ptype %>
+          <%= @palace.id %>
+
+        </p>
+
+<% end %>
+
+<%= link_to "Add a Peg", {:controller => "pegs", :action => "new", :palace_id => @palace.id }%>
+
+<br><br><br>
+
+<script type="text/javascript">
+    $('selector').fixedHeaderTable('show');
+</script>
+
+
+
+
+
+
+<%= link_to 'Edit', edit_palace_path(@palace) %> |
+<%= link_to 'Back', palaces_path %>

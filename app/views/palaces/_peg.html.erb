@@ -1,0 +1,16 @@
+<td>
+  <%= submit_tag "#{digit}", :type => 'button', :class => "btn btn-info", :onclick => "window.location.href = '/famous_people/code/#{digit}'" %>
+</td>
+<% @palace.pegs.each do |peg| %>
+    <% if peg.code == digit %>
+        <td><%= peg.code %></td>
+        <td><%= peg.place %></td>
+        <td><%= peg.action %></td>
+        <td><%= peg.link %></td>
+        <td><%= peg.note %></td>
+
+        <td><%= link_to 'Show', peg %></td>
+        <td><%= link_to 'Edit', edit_peg_path(peg) %></td>
+        <td><%= link_to 'Destroy', peg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+<% end %>

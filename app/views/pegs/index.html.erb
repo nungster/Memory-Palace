@@ -1,0 +1,26 @@
+<h1>Pegs</h1>
+
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+    <th>Code</th>
+    <th>Action</th>
+    <th>Place</th>
+    <th></th>
+  </tr>
+
+<% @pegs.each do |peg| %>
+  <tr>
+    <td><%= peg.code %></td>
+    <td><%= peg.action %></td>
+    <td><%= peg.place %></td>
+
+    <td><%= link_to 'Show', peg %></td>
+    <td><%= link_to 'Edit', edit_peg_path(peg) %></td>
+    <td><%= link_to 'Destroy', peg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Peg', new_peg_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code:</b>
+  <%= @peg.code %>
+</p>
+
+<p>
+  <b>FP ID:</b>
+  <%= @peg.fp_id %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @peg.place %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%= @peg.action %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @peg.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_peg_path(@peg) %> |
+<%= link_to 'Back', palace_path(@peg.palace_id) %>

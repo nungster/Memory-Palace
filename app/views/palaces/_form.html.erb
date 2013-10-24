@@ -1,0 +1,19 @@
+<%= simple_form_for(@palace) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <br>
+    Type of Palace to create:<br><br>
+    <%= f.radio_button(:ptype, 1) %>
+    <%= f.label(:ptype_numbers, "Numbers 0-99") %>
+    <%= f.radio_button(:ptype, 2) %>
+    <%= f.label(:ptype_cards, "Deck of Cards") %>
+
+  </div>
+  <br>
+  <br>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

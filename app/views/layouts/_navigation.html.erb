@@ -1,0 +1,57 @@
+<%= link_to "My Memory Palace", root_path, :class => 'brand' %>
+<div id="top-navigation" class="nav-collapse subnav-collapse pull-right">
+  <ul class="nav">
+  <% if user_signed_in? %>
+      <li>
+        <%= link_to('Famous People', famous_people_path)  %>
+      </li>
+      <li>
+        <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
+      </li>
+  <% else %>
+
+      <li>
+        <%= link_to('Browse Names', famous_people_path)  %>
+      </li>
+      <li>
+          <%= link_to('unsecure', new_user_session_path)  %>
+      </li>
+    <% end %>
+  <% if user_signed_in? %>
+      <li>
+        <%= link_to('Edit account', edit_user_registration_path) %>
+      </li>
+      <% if current_user.has_role? :admin %>
+          <li>
+            <%= link_to('Admin', users_path) %>
+          </li>
+      <% end %>
+   </ul>
+  <% else %>
+      <li>
+        <%= link_to('Contact Us', {:controller => "contact_us", :action => "index"})  %>
+      </li>
+    </ul>
+
+        <div class="top-account-control visible-desktop">
+          <%= link_to "Create Account", new_user_registration_path, :class => "top-create-account" %>
+          <%= link_to "Sign In", new_user_session_path, :class => "top-sign-in" %>
+          <div class="login-box">
+            <a class="close login-box-close" href="#">×</a>
+            <h4 class="login-box-head">Login Form</h4>
+            <div class="control-group">
+              <label>Username</label>
+              <input class="span2" type="text" placeholder="Input username...">
+            </div>
+            <div class="control-group">
+              <label>Password</label>
+              <input class="span2" type="text" placeholder="Input password...">
+            </div>
+            <div class="login-actions">
+              <button class="btn btn-primary">Log Me In</button>
+            </div>
+          </div>
+        </div>
+  <% end %>
+
+</div>
