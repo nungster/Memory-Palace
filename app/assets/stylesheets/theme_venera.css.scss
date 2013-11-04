@@ -6140,8 +6140,8 @@ a [class*=" icon-"] {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../../assets/fonts/fontawesome-webfont.eot?v=3.2.1');
-  src: url('../../assets/fonts/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../../assets/fonts/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../../assets/fonts/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../../assets/fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  src: url('../../assets/fontawesome-webfont.eot?v=3.2.1');
+  src: url('../../assets/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../../assets/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../../assets/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../../assets/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -9482,7 +9482,7 @@ table.no-margin {
 /* Area over the footer */
 .pre-footer {
   padding: 30px 0px;
-  background: #92a298 url('../images/slider-noise-bg.jpg') left top repeat;
+  background: #92a298 url('/assets/slider-noise-bg.jpg') left top repeat;
   border-top: 10px solid #7c8f83;
   /* Footer logo styles */
 

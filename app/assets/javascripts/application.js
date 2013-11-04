@@ -14,5 +14,9 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap
+//= require jquery-1.10.1.min
+//= require prettify
+//= require main
 //= require_tree .
-//= jquery-1.10.1.min
+
+

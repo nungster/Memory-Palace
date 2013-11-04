@@ -5,7 +5,7 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-# gem 'sqlite3'
+ gem 'sqlite3'
  gem 'mysql2'
 
 # Gems used only for assets and not required
@@ -24,7 +24,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'execjs'
 
 gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
 gem "email_spec", ">= 1.2.1", :group => :test
@@ -44,6 +44,8 @@ gem "quiet_assets", ">= 1.0.1", :group => :development
 #gem 'bootswatch-rails'
 gem "paperclip", "~> 3.0"
 gem "will_paginate", "~> 3.0.5"
+
+gem 'font-awesome-sass'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
