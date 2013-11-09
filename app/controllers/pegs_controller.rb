@@ -34,7 +34,7 @@ class PegsController < ApplicationController
     @peg.user_id = current_user.id
     @peg.palace_id = params[:palace_id]
 
-    puts("> ********")
+    puts("> Peg New ********")
     puts params[:palace_id]
     puts @peg.palace_id
     puts("> ********")
@@ -55,10 +55,9 @@ class PegsController < ApplicationController
   def create
     @peg = Peg.new(params[:peg])
     @peg.user_id = current_user.id
-    @peg.palace_id = params[:palace_id]
-    @peg.fp_id = params[:palace_id]
 
     puts("create > ********")
+    puts params[:peg]
     puts params[:palace_id]
     puts @peg.palace_id
     puts("> ********")

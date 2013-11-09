@@ -57,7 +57,8 @@ class FamousPeopleController < ApplicationController
   # GET /events/new
   # GET /events/new.json
   def new
-    @famouspeople = FamousPeople.new
+    @famouspeople = FamousPerson.new
+    @famouspeople.user_id = current_user.id
 
     respond_to do |format|
       format.html # new.html.erb
@@ -67,14 +68,13 @@ class FamousPeopleController < ApplicationController
 
   # GET /events/1/edit
   def edit
-    @famouspeople = FamousPeople.find(params[:id])
+    @famouspeople = FamousPerson.find(params[:id])
   end
 
   # POST /events
   # POST /events.json
   def create
-    @famouspeople = FamousPerson.new(params[:event])
-    @famouspeople.user_id = current_user.id
+    @famouspeople = FamousPerson.new(params[:famous_person])
 
     respond_to do |format|
       if @famouspeople.save
@@ -90,10 +90,10 @@ class FamousPeopleController < ApplicationController
   # PUT /events/1
   # PUT /events/1.json
   def update
-    @famouspeople = FamousPeople.find(params[:id])
+    @famouspeople = FamousPerson.find(params[:id])
 
     respond_to do |format|
-      if @famouspeople.update_attributes(params[:event])
+      if @famouspeople.update_attributes(params[:famous_person])
         format.html { redirect_to @famouspeople, notice: 'FamousPeople was successfully updated.' }
         format.json { head :no_content }
       else
@@ -106,7 +106,7 @@ class FamousPeopleController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
-    @famouspeople = FamousPeople.find(params[:id])
+    @famouspeople = FamousPerson.find(params[:id])
     @famouspeople.destroy
 
     respond_to do |format|

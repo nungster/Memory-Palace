@@ -16,6 +16,10 @@
         <%= @palace.id %>
 
     </p>
+    <div>
+      <%= link_to "Add a Custom Peg", {:controller => "pegs", :action => "new", :palace_id => @palace.id }%>
+    </div>
+    <br>
     <table class="table table-bordered table-striped table-hover">
       <tr>
         <th>Code</th>
