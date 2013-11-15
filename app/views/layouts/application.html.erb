@@ -35,7 +35,6 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
     <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag :defaults %>
 
     <!-- Add Google Web Fonts support -->
     <link href="http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700" media="all" rel="stylesheet" type="text/css" >
@@ -52,7 +51,22 @@
     </div>
   </div>
  </header>
-  <div>
+  <%= render 'layouts/carousel' %>
+  <section class="section-wrapper stripped">
+    <div>
+      <div class="row">
+        <div class="span4"></div>
+        <div class="span3"></div>
+        <div class="span3"></div>
+        <% if user_signed_in? %>
+          <div class="span1"> <%= current_user.name %></div>
+          <div class="span1"><%= button_to('Logout', destroy_user_session_path, :method => :delete) %>
+          </div>
+        <% else %>
+          <div class="span2"></div>
+        <% end %>
+          <br>
+      </div>
     <div class="container">
       <div>
         <div>
@@ -66,5 +80,6 @@
       </div>
     </div> <!--! end of .container -->
   </div> <!--! end of #main -->
+  </section>
   </body>
 </html>

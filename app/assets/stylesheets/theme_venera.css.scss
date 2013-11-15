@@ -763,7 +763,7 @@ abbr.initialism {
   text-transform: uppercase;
 }
 blockquote {
-  background: #ffffff url("../images/quotes.png") 15px 15px no-repeat;
+  background: #ffffff url("quotes.png") 15px 15px no-repeat;
   padding: 15px 15px 15px 70px;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.07);
   -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.07);
@@ -784,7 +784,7 @@ blockquote small:before {
   content: '\2014 \00A0';
 }
 blockquote.colored {
-  background: #ffffff url("../images/quotes-dark.png") 15px 15px no-repeat;
+  background: #ffffff url("quotes-dark.png") 15px 15px no-repeat;
   border: 1px solid #b7b4ac;
 }
 blockquote.pull-right {
@@ -792,7 +792,7 @@ blockquote.pull-right {
   padding-right: 70px;
   padding-left: 15px;
   border-left: 0;
-  background: #ffffff url("../images/quotes.png") right 15px no-repeat;
+  background: #ffffff url("quotes.png") right 15px no-repeat;
 }
 blockquote.pull-right p,
 blockquote.pull-right small {
@@ -4715,7 +4715,7 @@ a.badge:focus {
   display: block;
   padding: 15px 20px;
   background: #f7f8f1;
-  background: #f7f8f1 url('../images/accordion-on.png') 97% center no-repeat;
+  background: #f7f8f1 url('accordion-on.png') 97% center no-repeat;
   -webkit-box-shadow: 1px 1px 2px #ffffff inset, 1px 1px 3px 0px #d7d8cf;
   -moz-box-shadow: 1px 1px 2px #ffffff inset, 1px 1px 3px 0px #d7d8cf;
   box-shadow: 1px 1px 2px #ffffff inset, 1px 1px 3px 0px #d7d8cf;
@@ -7676,7 +7676,7 @@ a .icon-flip-vertical:before {
   position: relative;
   padding: 50px;
   *padding-top: 30px;
-  background: transparent url('../images/stripped-bg.png') left top repeat;
+  background: transparent url('stripped-bg.png') left top repeat;
   -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1) inset;
@@ -8221,10 +8221,10 @@ li.L9 {
   float: right;
 }
 .lb-prev:hover {
-  background: url("../images/lightbox/prev.png") left 48% no-repeat;
+  background: url("lightbox/prev.png") left 48% no-repeat;
 }
 .lb-next:hover {
-  background: url("../images/lightbox/next.png") right 48% no-repeat;
+  background: url("lightbox/next.png") right 48% no-repeat;
 }
 .lb-dataContainer {
   margin: 0 auto;
@@ -8951,7 +8951,7 @@ li.L9 {
 /* Slider styles */
 .slider-w {
   text-align: center;
-  background: #76a3a0 url('../images/slider-noise-blue-bg.jpg') top left repeat;
+  background: #76a3a0 url('slider-noise-blue-bg.jpg') top left repeat;
   /* Slider item */
 
   /* Browser showcasing product */
@@ -9105,9 +9105,9 @@ li.L9 {
   font-weight: 300;
 }
 .just-stripped {
-  background: transparent url('../images/stripped-bg.png') left top repeat;
+  background: transparent url('stripped-bg.png') left top repeat;
 }
-/* Can be used to separte sections of the website */
+/* Can be used to separate sections of the website */
 .section-wrapper {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -9123,7 +9123,7 @@ li.L9 {
 
 }
 .section-wrapper.stripped {
-  background: transparent url('../images/stripped-bg.png') left top repeat;
+  background: transparent url('stripped-bg.png') left top repeat;
 }
 .section-wrapper.under-slider {
   border-top: 3px solid #fff;
@@ -9452,7 +9452,7 @@ form.no-margin-bottom {
   display: none;
   padding: 20px;
   padding-left: 70px;
-  background: #ffffff url('../images/quotes.png') 15px 20px no-repeat;
+  background: #ffffff url('quotes.png') 15px 20px no-repeat;
   -webkit-box-shadow: 0px 1px 4px 1px #b4b6a9;
   -moz-box-shadow: 0px 1px 4px 1px #b4b6a9;
   box-shadow: 0px 1px 4px 1px #b4b6a9;

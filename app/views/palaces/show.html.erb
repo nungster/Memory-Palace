@@ -1,23 +1,19 @@
-
-<p>
-  <b>Title:</b>
+<br><br>
+<p><h3><b>Memory Palace: </b></h3>
+<h2>
   <%= @palace.title %>
-</p>
+</h2></p>
 
-<p>
-  <b>Type:</b>
-  <%= @palace.ptype %>
-</p>
 
 <% if @palace.ptype == 1 %>
     <p>
-        <b>Numbers:</b>
-        <%= @palace.ptype %>
-        <%= @palace.id %>
 
     </p>
     <div>
       <%= link_to "Add a Custom Peg", {:controller => "pegs", :action => "new", :palace_id => @palace.id }%>
+    </div>
+    <div>
+      <%= link_to 'My Palaces', palaces_path %>
     </div>
     <br>
     <table class="table table-bordered table-striped table-hover">

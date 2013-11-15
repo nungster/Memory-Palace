@@ -6,7 +6,8 @@
         <%= link_to('Famous People', famous_people_path)  %>
       </li>
       <li>
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+      </li>
+      <li>
       </li>
   <% else %>
 
@@ -14,7 +15,6 @@
         <%= link_to('Browse Names', famous_people_path)  %>
       </li>
       <li>
-          <%= link_to('unsecure', new_user_session_path)  %>
       </li>
     <% end %>
   <% if user_signed_in? %>

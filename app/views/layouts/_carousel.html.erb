@@ -1,0 +1,60 @@
+<% if current_page?(root_path) && !current_user %>
+
+    <div class='carousel slide over-something' id='homepage-carousel'>
+  <div class='carousel-inner slider-w'>
+    <div class='active item'>
+      <div class='container'>
+        <h1 class='slider-header'>Build a <strong>Stronger</strong> memory with Memkazar.</h1>
+        <h2 class='slider-sub-header'>Find Names and Ideas for your memory palaces.</h2>
+        <div class='cta'>
+          <a href="features/pricing_tables.html" class="btn btn-cta">Some Action Button</a>
+        </div>
+        <div class='slider-browsers-w clearfix'>
+          <div class='slider-browser slider-browser-left hidden-phone' data-position-bottom='-8%'>
+            <img alt="Browser-window-1" src="assets/browser-window.png" />
+          </div>
+          <div class='slider-browser slider-browser-center' data-position-bottom='-9%'>
+            <img alt="Browser-window-2" src="assets/browser-window.png" />
+          </div>
+          <div class='slider-browser slider-browser-right hidden-phone' data-position-bottom='-8%'>
+            <img alt="Browser-window-3" src="assets/browser-window.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='item'>
+      <div class='container'>
+        <h1 class='slider-header'>Build Your Memory Palace at Memkazar.</h1>
+        <h2 class='slider-sub-header'>Find Names to Use In Your Memory Palace.</h2>
+        <div class='cta'>
+          <a href="features/pricing_tables.html" class="btn btn-cta btn-warning">Some Action Button</a>
+        </div>
+        <div class='row zoomed-browsers-w'>
+          <div class='span4'>
+            <div class='zoomed-browser'>
+              <img alt="Browser-window-1" src="assets/browser-window.png" />
+            </div>
+          </div>
+          <div class='span4'>
+            <div class='zoomed-browser hidden-phone'>
+              <img alt="Browser-window-2" src="assets/browser-window.png" />
+            </div>
+          </div>
+          <div class='span4'>
+            <div class='zoomed-browser hidden-phone'>
+              <img alt="Browser-window-3" src="assets/browser-window.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class='carousel-control left' data-slide='prev' href='#homepage-carousel'>
+    <i class='icon-chevron-left'></i>
+  </a>
+  <a class='carousel-control right' data-slide='next' href='#homepage-carousel'>
+    <i class='icon-chevron-right'></i>
+  </a>
+</div>
+
+<% end %>

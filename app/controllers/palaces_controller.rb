@@ -20,7 +20,7 @@ class PalacesController < ApplicationController
     puts("> ********")
     puts current_user.id
 
-    @palaces = Palace.all
+    @palaces = Palace.find_all_by_user_id(current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
